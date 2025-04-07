@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ports",
+  "info": {
+    "singularName": "port",
+    "pluralName": "ports",
+    "displayName": "port",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::country.country",
+      "inversedBy": "ports"
+    },
+    "city": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "lng": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "string"
+    }
+  }
+}
